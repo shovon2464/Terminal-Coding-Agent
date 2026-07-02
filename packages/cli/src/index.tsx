@@ -2,9 +2,11 @@ import { createCliRenderer} from "@opentui/core";
 import { createRoot } from "@opentui/react";
 import { Header } from "./components/header";
 import { InputBar } from "./components/input-bar";
+import { ToastProvider } from "./providers/toast";
 
 function App() {
   return (
+    <ToastProvider>
     <box
       alignItems="center"
       justifyContent="center"
@@ -17,8 +19,12 @@ function App() {
             <InputBar onSubmit={() => {}} />
           </box>
     </box>
+    </ToastProvider>
   );
 }
 
-const renderer = await createCliRenderer();
+const renderer = await createCliRenderer({
+  targetFps: 60,
+  exitOnCtrlC: false,
+});
 createRoot(renderer).render(<App />);
