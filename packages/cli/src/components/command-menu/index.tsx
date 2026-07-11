@@ -2,7 +2,6 @@ import type { RefObject } from "react";
 import { TextAttributes, type ScrollBoxRenderable } from "@opentui/core";
 import { getFilteredCommands } from "./filter-commands";
 import { COMMANDS } from "./commands";
-import { useKeyboardLayer } from "../../providers/keyboard-layer";
 
 const MAX_VISIBLE_ITEMS = 8;
 
