@@ -1,0 +1,11 @@
+{
+    "name": "@Terminal-Coding-Agent/shared",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "private": true,
+    "type": "module",
+    "dependencies": {
+        "zod": "^4.4.3"
+    }
+}
